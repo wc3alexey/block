@@ -19,9 +19,7 @@
 }
 .container{
     margin: auto;
-    background: #F2F2F2;
-  
-    
+    background: #F2F2F2; 
 }
 * {
     box-sizing: content-box;
@@ -36,7 +34,6 @@
 }
 .menu__content{
     width: 320px;
-    font-family: TTlakes Regular;
     display: flex;
     flex-direction: column ;
     background: #F8F8F8;    
@@ -56,6 +53,7 @@
     height: 40px;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
 }
 .header__button-main{
     background: #FF3E79 url(img/icon1.png);
@@ -256,6 +254,7 @@ display: none;
                 }
                 .text__add-more{
                margin-top: 10px;
+               cursor: pointer;
                 }
             .text__add-more::before{
                 width: 100px;
