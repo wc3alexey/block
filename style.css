@@ -61,7 +61,7 @@
     background-repeat:no-repeat;
     background-position: center;
     }
-    .header__button-phone{
+ .header__button-phone{
         background: #FF3E79 url(img/phone.png);
         margin: 24px 0 24px 0;
         background-repeat:no-repeat;
@@ -171,14 +171,14 @@ display: none;
     .text__main-textTablet, .text__main-textDesctop{
         display: none;
     }
-    .text__add-more{
+    .button__add-more{
         border: none;
         text-decoration: none;
         color: #1B1C21;
         background:#F8F8F8 ;
         font-family:'TTLakesCondensed-Medium.ttf';
     }
-       .text__add-more:before{
+       .button__add-more:before{
         content: url(img/icon3.png);
         width: 8px;
         height: 5px;
@@ -252,11 +252,11 @@ display: none;
                     margin-bottom: 10px;
                     margin-left: 0;
                 }
-                .text__add-more{
+                .button__add-more{
                margin-top: 10px;
                cursor: pointer;
                 }
-            .text__add-more::before{
+            .button__add-more::before{
                 width: 100px;
                 height: 24px;
                 margin:10px 27px 15px 24px ;
@@ -363,9 +363,36 @@ display: none;
             .text__img{
                 width: 532px;
              border-radius: 2%;
-             margin:0 30px 50px 36px;
+             margin:0 30px 300px 36px;
                 }
-                .text__add-more{
+                .button__add-more{
                     margin:13px 10px 0 10px; 
                    }
+        }
+        @media  (min-width:1800px){
+            .header__content{
+                margin: auto;
+            }
+            .menu__content{
+                margin: auto;
+            }
+            .main__content{
+                margin: auto;
+            }
+            .header__button-serviceDesctop::before{
+                position: absolute;
+                content:"Оставить заявку";
+                Width:125px; 
+                left: 1065px;
+                top: 55px;
+            }
+            .header__button-searchDesctop::before{
+                position: absolute;
+                content:"Статус ремонта";
+                Width:125px;
+                top: 55px; 
+                height: 24px;
+                left: 1255px;
+            }
+
         }
