@@ -13,14 +13,15 @@
 }
 @font-face {
 	font-family: 'TTLakesCondensed-Regular.ttf';
-    src: url('./fonts/TTLakes-Thin.eot');
-    Font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
+   src: url('./fonts/TTLakesCondensed-Regular.ttf');
+    Fill: Solid;
+    color: #1B1C21;
 }
-.conteiner{
+.container{
     margin: auto;
     background: #F2F2F2;
+    width: 1920px;
+    height: 1080px;
 }
 * {
     box-sizing: content-box;
@@ -40,7 +41,7 @@
     flex-direction: column ;
     background: #F8F8F8;    
 }
-.mein__content{
+.main__content{
     width: 320px;
     display: flex;
     flex-direction: column ;
@@ -49,62 +50,44 @@
 .header__img-group{
     margin:18px;
 }
-.button__header-main{
-    background: #FF3E79 url(img/icon1.png);
+.button{
     display: inline-block;
-    margin: 24px 0px 24px 16px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: none;
-    background-repeat:no-repeat ;
+}
+.header__button-main{
+    background: #FF3E79 url(img/icon1.png);
+    margin: 24px 0px 24px 16px;
+    background-repeat:no-repeat;
     background-position: center;
     }
-    .button__header-phone{
+    .header__button-phone{
         background: #FF3E79 url(img/phone.png);
-        display: inline-block;
         margin: 24px 0 24px 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        background-repeat:no-repeat ;
+        background-repeat:no-repeat;
         background-position: center;
     }
-    .button__header-message{
+    .header__button-message{
         background: #FF3E79 url(img/message.png);
-        display: inline-block;
         margin: 24px 14px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        background-repeat:no-repeat ;
+        background-repeat:no-repeat;
         background-position: center;
     }
-    .button__header-contact{
+    .header__button-contact{
         background: #FF3E79 url(img/contacts.png);
-        display: inline-block;
         margin: 24px 0 24px 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        background-repeat:no-repeat ;
+        background-repeat:no-repeat;
         background-position: center;
     }
-    .button__header-service{
+    .header__button-service{
         background: #FF3E79 url(img/Group1.png);
-        display: inline-block;
         margin: 24px 0 24px 16px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        background-repeat:no-repeat ;
+        background-repeat:no-repeat;
         background-position: center;
     }
-.button__header-service:before{
+.header__button-service:before{
     position: absolute;
     content:"|";
    left: 188px;
@@ -114,24 +97,19 @@
     color: #EAEAEA;
     background-color: #EAEAEA;
 }
-.button__header-search{
+.header__button-search{
     background: #FF3E79 url(img/icon.png);
-    display: inline-block;
     margin: 24px 16px 24px 16px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
     background-repeat:no-repeat;
     background-position: center;
 }
-.button__header-search2{
+.header__button-searchDesctop{
   display: none;
 }
-.button__header-service2{
+.header__button-serviceDesctop{
    display: none;
 }
-.button__header-phone, .button__header-message, .button__header-contact{
+.header__button-phone, .header__button-message, .header__button-contact{
 display: none;
 }
     .menu__title {
@@ -149,7 +127,7 @@ display: none;
        border-radius: 2px;
        margin-left: -20px;
        }
-       .menu__title1{
+       .menu__title-desctop{
         display: none ;
     }
         .menu__list{
@@ -178,12 +156,12 @@ display: none;
             box-sizing: border-box;
             border: 2px solid #F8F8F8;
           }
-          .menu__item__link{
+          .menu__link{
             white-space: nowrap;
             text-decoration: none;
             color: #7E7E82;
           }
-          .text{
+          .main__text{
             font-family: 'TTLakesCondensed-Regular.ttf';
             color: #1B1C21;
           }
@@ -192,27 +170,27 @@ display: none;
            margin-left:16px;
            width: 288px;
        }
-    .text__main-text1, .text__main-text2{
+    .text__main-textTablet, .text__main-textDesctop{
         display: none;
     }
-    .main__next{
+    .text__add-more{
         border: none;
         text-decoration: none;
         color: #1B1C21;
         background:#F8F8F8 ;
         font-family:'TTLakesCondensed-Medium.ttf';
     }
-       .main__next:before{
+       .text__add-more:before{
         content: url(img/icon3.png);
         width: 8px;
         height: 5px;
        margin-right:16px;
        margin-left: 24px;
     }
-       .img__main{
+       .text__img {
        Width :320px;
        margin-top: 16px;
-       margin-bottom: 7px;
+       margin-bottom: 36px;
        }
             @media (min-width:768px) {
                 .header__content{
@@ -223,23 +201,23 @@ display: none;
                     flex-direction: column;
                     background: #F8F8F8;
                 }
-                .mein__content{
+                .main__content{
                     width: 768px;
                     flex-direction: row;
                 }
-                .button__header-phone, .button__header-message, .button__header-contact{
+                .header__button-phone, .header__button-message, .header__button-contact{
         display:inline-block;      
             }
-            .button__header-main{
+            .header__button-main{
                 margin:24px 0 24px 22px;
             }
-            .button__header-service{
+            .header__button-service{
                 margin: 24px 0 24px 40px;
             }
-            .button__header-search{
+            .header__button-search{
                 margin: 24px 38px 24px 14px;
             }
-            .button__header-main:before{
+            .header__button-main:before{
                 position: absolute;
                 content:"|";
                left: 80px;
@@ -249,7 +227,7 @@ display: none;
                 color: #EAEAEA;
                 background-color: #EAEAEA;
             }
-            .button__header-service:before{
+            .header__button-service:before{
                 position: absolute;
                 content:"|";
                left: 616px;
@@ -263,36 +241,36 @@ display: none;
                 margin-right:248px;
                 margin-left: 40px;
             }
-           .text{
+           .main__text{
                margin-left: 24px;
            }
-                .text__main-text, .text__main-text2{
+                .text__main-text, .text__main-textDesctop{
                     display: none;
                 }
-                .text__main-text1{
+                .text__main-textTablet{
                     display: inline;
                     Width: 312px;
                     Height:160px;
                     margin-bottom: 10px;
+                    margin-left: 0;
                 }
-                .main__next{
+                .text__add-more{
                margin-top: 10px;
                 }
-            .main__next::before{
+            .text__add-more::before{
                 width: 100px;
                 height: 24px;
                 margin:10px 27px 15px 24px ;
                } 
-            .img__main{
+            .text__img{
                 width: 360px;
                display: block;
                border-radius: 2%;
-               margin: 0 25px 14px 48px;
+               margin: 0 25px 40px 48px;
                 }
             }
         @media  (min-width:1120px){
             .header__content{
-              
                 border-bottom: none;
                 width: 1120px;
                 background: #F8F8F8;
@@ -300,27 +278,26 @@ display: none;
             .menu__content{
                 width: 1120px;
             }
-            .mein__content{
+            .main__content{
                     background: #F8F8F8;
                     width: 1120px;
                 }
-                .button__header-main,.button__header-phone, .button__header-message, .button__header-contact,
-                .button__header-search, .button__header-service{
+                .header__button-main,.header__button-phone, .header__button-message, .header__button-contact,
+                .header__button-search, .header__button-service{
                     display: none;
                 }
                 .menu__title{
                     display: none;
                 }
-             
                 .header__img-group{
                     display: none;
                 }
-                .menu__title1{
+                .menu__title-desctop{
                     display: inline;
                     font-family:'TTLakes-Bold.ttf';
                     margin: 42px 0 0 34px;
                 }
-                .menu__title1:before{
+                .menu__title-desctop:before{
                     content: "|";
                     width: 3px;
                     height: 40px;
@@ -330,49 +307,37 @@ display: none;
                     border-radius: 5px;
                     margin-left: -40px;
                    }
-                       .button__header-search2, .button__header-service2{
+                       .header__button-searchDesctop, .header__button-serviceDesctop{
                 display:inline-block;
             }
-                .button__header-search2{
+                .header__button-searchDesctop{
                     background: #FF3E79 url(img/icon.png);
-                    display: inline-block;
                     margin: 42px 16px 24px 130px;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    border: none;
                     background-repeat:no-repeat;
                     background-position: center;
                 }
-                .button__header-service2{
+                .header__button-serviceDesctop{
                     background: #FF3E79 url(img/Group1.png);
-                    display: inline-block;
                     margin: 42px 16px 24px 540px;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    border: none;
                     background-repeat:no-repeat ;
                     background-position: center;
                 }
-            .button__header-service2::before{
+            .header__button-serviceDesctop::before{
                 position: absolute;
                 content:"Оставить заявку";
                 Width:125px; 
-                left: 710px;
+                left: 730px;
                 top: 55px;
                 color: #1B1C21;
                 font-family:'TTLakesCondensed-Medium.ttf';
-               
-
             }
-            .button__header-search2::before{
+            .header__button-searchDesctop::before{
                 position: absolute;
                 content:"Статус ремонта";
                 Width:125px;
                 top: 55px; 
                 height: 24px;
-                left: 900px;
+                left: 920px;
                 color: #1B1C21;
                 font-family:'TTLakesCondensed-Medium.ttf';
             }
@@ -387,23 +352,21 @@ display: none;
                 margin-left: 0;
                 margin-right: 0;
             }
-            .text__main-text,.text__main-text1{
+            .text__main-text,.text__main-textTablet{
                 display: none;
-            
             }
-            .text__main-text2{
-                display: inline;
-                
+            .text__main-textDesctop{
+                display: inline;  
             }
-                .text{
-                    margin-left: 34px;
+                .text__main-textDesctop{
+                    margin-left: 0;
                 }
-            .img__main{
+            .text__img{
                 width: 532px;
              border-radius: 2%;
-             margin:0px 28px 0 36px;
+             margin:0 30px 50px 36px;
                 }
-                .main__next{
+                .text__add-more{
                     margin:13px 10px 0 10px; 
                    }
         }
