@@ -38,7 +38,7 @@
     flex-direction: column ;
     background: #F8F8F8;    
 }
-.main__content{
+.main__description{
     width: 320px;
     display: flex;
     flex-direction: column ;
@@ -130,6 +130,8 @@ display: none;
     }
         .menu__list{
             font-family:'TTLakesCondensed-Medium.ttf';
+            Font-size: 16px;
+            color: #7E7E82;
             overflow-x: scroll;
             display: flex;
             list-style: none;
@@ -150,7 +152,6 @@ display: none;
             margin:0 19px 24px 16px;
             font-size: 16px;
             line-height: 24px;
-          
             box-sizing: border-box;
             border: 2px solid #F8F8F8;
           }
@@ -162,6 +163,7 @@ display: none;
           .main__text{
             font-family: 'TTLakesCondensed-Regular.ttf';
             color: #1B1C21;
+            Font-size: 14px;
           }
        .text__main-text{
            margin-bottom: 16px;
@@ -174,6 +176,7 @@ display: none;
     .button__add-more{
         border: none;
         text-decoration: none;
+        Font-size: 16px;
         color: #1B1C21;
         background:#F8F8F8 ;
         font-family:'TTLakesCondensed-Medium.ttf';
@@ -199,13 +202,16 @@ display: none;
                     flex-direction: column;
                     background: #F8F8F8;
                 }
-                .main__content{
+                .main__description{
                     width: 768px;
                     flex-direction: row;
                 }
                 .header__button-phone, .header__button-message, .header__button-contact{
         display:inline-block;      
             }
+         .header__button-left{
+             display: inline;
+         }
             .header__button-main{
                 margin:24px 0 24px 22px;
             }
@@ -236,7 +242,7 @@ display: none;
                 background-color: #EAEAEA;
             }
             .header__img-group{
-                margin-right:248px;
+                margin-right:240px;
                 margin-left: 40px;
             }
            .main__text{
@@ -259,13 +265,13 @@ display: none;
             .button__add-more::before{
                 width: 100px;
                 height: 24px;
-                margin:10px 27px 15px 24px ;
+                margin:10px 27px 15px 8px ;
                } 
             .text__img{
                 width: 360px;
                display: block;
                border-radius: 2%;
-               margin: 0 25px 40px 48px;
+               margin: 0 25px 40px 80px;
                 }
             }
         @media  (min-width:1120px){
@@ -277,7 +283,7 @@ display: none;
             .menu__content{
                 width: 1120px;
             }
-            .main__content{
+            .main__description{
                     background: #F8F8F8;
                     width: 1120px;
                 }
@@ -311,34 +317,34 @@ display: none;
             }
                 .header__button-searchDesctop{
                     background: #FF3E79 url(img/icon.png);
-                    margin: 42px 16px 24px 130px;
+                    margin: 42px 16px 24px 160px;
                     background-repeat:no-repeat;
                     background-position: center;
                 }
                 .header__button-serviceDesctop{
                     background: #FF3E79 url(img/Group1.png);
-                    margin: 42px 16px 24px 540px;
+                    margin: 42px 0 24px 540px;
                     background-repeat:no-repeat ;
                     background-position: center;
                 }
             .header__button-serviceDesctop::before{
                 position: absolute;
                 content:"Оставить заявку";
-                Width:125px; 
-                left: 730px;
+                left: 720px;
                 top: 55px;
                 color: #1B1C21;
                 font-family:'TTLakesCondensed-Medium.ttf';
+                Font-size: 16px;
             }
             .header__button-searchDesctop::before{
                 position: absolute;
                 content:"Статус ремонта";
-                Width:125px;
-                top: 55px; 
                 height: 24px;
-                left: 920px;
+                left: 925px;
+                top: 55px;
                 color: #1B1C21;
                 font-family:'TTLakesCondensed-Medium.ttf';
+                Font-size: 16px;
             }
             .menu__list{
                 flex-direction: row ;
@@ -350,23 +356,37 @@ display: none;
             .menu__item{
                 margin-left: 0;
                 margin-right: 0;
+                margin-bottom: -2px;
+                border: 2px solid #ccc transparent;
+            }
+            .main__text{
+                margin-left: 34px;
+                margin-top: 20px;
             }
             .text__main-text,.text__main-textTablet{
                 display: none;
             }
             .text__main-textDesctop{
-                display: inline;  
+                display: inline;
+                font-family: 'TTLakesCondensed-Regular.ttf';
+                font-size: 14px;
+                color: #1B1C21;  
             }
                 .text__main-textDesctop{
                     margin-left: 0;
+                    font-family: 'TTLakesCondensed-Regular.ttf';
+                    font-size: 14px;
                 }
             .text__img{
                 width: 532px;
              border-radius: 2%;
-             margin:0 30px 300px 36px;
+             margin:20px 30px 300px 88px;
+
                 }
-                .button__add-more{
-                    margin:13px 10px 0 10px; 
+                .button__add-more::before{
+                    margin:0; 
+                    margin-right: 16px;
+                    margin-left: 6px;
                    }
         }
         @media  (min-width:1800px){
@@ -376,23 +396,13 @@ display: none;
             .menu__content{
                 margin: auto;
             }
-            .main__content{
+            .main__description{
                 margin: auto;
             }
             .header__button-serviceDesctop::before{
-                position: absolute;
-                content:"Оставить заявку";
-                Width:125px; 
-                left: 1065px;
-                top: 55px;
+                left: 1055px;
             }
             .header__button-searchDesctop::before{
-                position: absolute;
-                content:"Статус ремонта";
-                Width:125px;
-                top: 55px; 
-                height: 24px;
-                left: 1255px;
+                left: 1260px;
             }
-
         }
